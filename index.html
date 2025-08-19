@@ -11,6 +11,11 @@
         }
 
 
+        #food-title{
+            color: blue;
+        }
+
+
     </style>
 </head>
 <body>
@@ -18,16 +23,63 @@
         <h1>This is my header</h1>
     </header>
     <main>
-        <h1>Welcome to my DOM</h1>
+        <!-- <h1>Welcome to my DOM</h1>
+        <ul>
+            <li>Shafayet</li>
+            <li>Bonobash</li>
+            <li>Jalali Set</li>
+        </ul> -->
+
+        <section>
+            <h1>Welcome to my DOM</h1>
         <ul>
             <li>Shafayet</li>
             <li>Bonobash</li>
             <li>Jalali Set</li>
         </ul>
+        </section>
+
+
+        <section>
+            <h1 id="food-title">Foods I love</h1>
+            <ul>
+                <li>Rice</li>
+                <li>Potato</li>
+                <li>Fish</li>
+                <li>Lentils</li>
+                <li>Burger</li>
+                <li>Pizza</li>
+                <li>Pasta</li>
+            </ul>
+        </section>
     </main>
     <script>
-        console.log('Welcome to Javascript')
-        console.log('Hello')
+        // console.log('Welcome to Javascript')
+        // console.log('Hello')
+        // console.log('DOM-Document object Model')
+        const student = {
+            name: 'abul',
+            id: 121,
+            study: function (subject){
+                // console.log('subject i study is :', subject);
+
+            }
+        }
+
+        // document.getElementsByTagName
+
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+
+        //all h1 tags
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const heading of allHeadings){
+            console.log(heading.innerText);
+        }
     </script>
     <script src="js/hello.js"></script>
 </body>
