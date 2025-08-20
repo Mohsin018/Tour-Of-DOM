@@ -35,7 +35,7 @@
         <ul>
             <li>Shafayet</li>
             <li>Bonobash</li>
-            <li>Jalali Set</li>
+            <li id="boss">Jalali Set</li>
         </ul>
         </section>
 
@@ -46,9 +46,9 @@
                 <li>Rice</li>
                 <li>Potato</li>
                 <li>Fish</li>
-                <li>Lentils</li>
-                <li>Burger</li>
-                <li>Pizza</li>
+                <li class="foreign">Lentils</li>
+                <li class="foreign">Burger</li>
+                <li class="foreign">Pizza</li>
                 <li>Pasta</li>
             </ul>
         </section>
@@ -74,6 +74,35 @@
         for(const li of liCollection){
             console.log(li.innerText);
         }
+
+
+
+        //get by id in dom
+        const foodTitleH1 = document.getElementById('food-title');
+        console.log(foodTitleH1.innerText);
+        foodTitleH1.innerText = 'Food i love to eat';
+
+
+        //li get accessed by dom
+        const getLi = document.getElementById('boss');
+        getLi.innerText = 'jalali rocks';
+
+
+        //get by an class name
+
+        const getClass = document.getElementsByClassName('foreign');
+        console.log(getClass);
+        console.log(getClass[0].innerText);
+
+        //or you can use a for loop
+
+        for(const liClass of getClass ){
+            // console.log(liClass);
+            console.log(liClass.innerText);
+        }
+
+
+
 
         //all h1 tags
         const allHeadings = document.getElementsByTagName('h1');
