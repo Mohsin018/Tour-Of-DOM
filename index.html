@@ -15,6 +15,10 @@
             color: blue;
         }
 
+        .bg-color{
+            color: brown;
+        }
+
 
     </style>
 </head>
@@ -30,7 +34,10 @@
             <li>Jalali Set</li>
         </ul> -->
 
-        <section>
+        <section id="old-dhaka">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. <span> Voluptatibus </span>error provident totam placeat ipsam delectus <span> enim </span> quaerat culpa. Illum explicabo atque exercitationem nemo tempore placeat omnis accusantium inventore aliquid soluta?
+            </p>
             <h1>Welcome to my DOM</h1>
         <ul>
             <li>Shafayet</li>
@@ -109,6 +116,31 @@
         for(const heading of allHeadings){
             console.log(heading.innerText);
         }
+
+        //queryselectorall
+        const spanElements = document.querySelectorAll('#old-dhaka p span');
+        for(const span of spanElements){
+            console.log(span.innerText);
+        }
+
+        //access css by using dom
+        const foodElement = document.getElementById('food-title');
+        foodElement.style.color //or
+        foodElement.style.color = 'blue'
+        foodElement.style.backgroundColor = 'lightgreen';
+        foodElement.style.borderRadius = '15px';
+        foodElement.style.padding = '10px';
+        foodElement.style.marginLeft = '10px';
+        foodElement.style.border = '2px';
+
+        //you can also add a class in code by using dom
+        foodElement.classList.add('bg-color');
+        
+        //to access the attribute
+        foodElement.getAttribute
+
+        //set attribute
+        foodElement.setAttribute('title', 'Title or tooltip by js');
     </script>
     <script src="js/hello.js"></script>
 </body>
