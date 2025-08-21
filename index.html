@@ -59,6 +59,16 @@
                 <li>Pasta</li>
             </ul>
         </section>
+
+        <section>
+            <h1 id="players-container">Players</h1>
+            <ul>
+                <li>Messi</li>
+                <li>Pele</li>
+                <li>Ronaldo</li>
+                <li>Embape</li>
+            </ul>
+        </section>
     </main>
     <script>
         // console.log('Welcome to Javascript')
@@ -76,17 +86,17 @@
         // document.getElementsByTagName
 
         const liCollection = document.getElementsByTagName('li');
-        console.log(liCollection);
+        // console.log(liCollection);
 
         for(const li of liCollection){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
 
 
 
         //get by id in dom
         const foodTitleH1 = document.getElementById('food-title');
-        console.log(foodTitleH1.innerText);
+        // console.log(foodTitleH1.innerText);
         foodTitleH1.innerText = 'Food i love to eat';
 
 
@@ -98,14 +108,14 @@
         //get by an class name
 
         const getClass = document.getElementsByClassName('foreign');
-        console.log(getClass);
-        console.log(getClass[0].innerText);
+        // console.log(getClass);
+        // console.log(getClass[0].innerText);
 
         //or you can use a for loop
 
         for(const liClass of getClass ){
             // console.log(liClass);
-            console.log(liClass.innerText);
+            // console.log(liClass.innerText);
         }
 
 
@@ -114,13 +124,13 @@
         //all h1 tags
         const allHeadings = document.getElementsByTagName('h1');
         for(const heading of allHeadings){
-            console.log(heading.innerText);
+            // console.log(heading.innerText);
         }
 
         //queryselectorall
         const spanElements = document.querySelectorAll('#old-dhaka p span');
         for(const span of spanElements){
-            console.log(span.innerText);
+            // console.log(span.innerText);
         }
 
         //access css by using dom
@@ -141,7 +151,12 @@
 
         //set attribute
         foodElement.setAttribute('title', 'Title or tooltip by js');
+
+
+        
     </script>
     <script src="js/hello.js"></script>
+    <script src="js/cssinJS.js"></script>
+    
 </body>
 </html>
